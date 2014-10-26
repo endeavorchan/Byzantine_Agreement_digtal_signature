@@ -30,7 +30,7 @@ void MSG::sendMessage(int type, void* p, int dest_id){
 	struct hostent *host = gethostbyname(pos->second.c_str());
 	memcpy(&dest_ip, host->h_addr_list[0], host->h_length);
 	//cout << "the ip of the dest is "<< pos->second << endl;
-    char buf[MAXBUFLEN];
+    	char buf[MAXBUFLEN];
 	memset(&saddr, 0, sizeof(saddr));
   	saddr.sin_family = AF_INET;
   	saddr.sin_addr.s_addr = dest_ip;
